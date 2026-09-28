@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pump English</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="bgb"></div><button id="mt" onclick="toggleM()">🔊</button>
+<div id="load"><div class="lb">🎈</div><div class="logo">Pump<b>English</b></div><div class="bar"><i id="lbar" style="animation:none"></i></div><small id="lpct">0%</small><small id="ltip" style="max-width:280px;text-align:center;min-height:36px"></small><button class="g" id="lgo" style="display:none" onclick="enter()">▶ Enter game</button></div>
+<div class="wrap">
+<div class="logo" style="font-size:28px;margin-bottom:12px">Pump<b>English</b></div>
+<div id="menu">
+ <div class="card"><h2>1. Players</h2>
+  <div class="row"><input id="pn" placeholder="Player name"><button onclick="addP()">Add</button></div>
+  <div class="chips" id="plist"></div></div>
+ <div class="card"><h2>2. Rounds</h2><div class="chips rounds" id="rlist"></div></div>
+ <div class="card"><h2>3. English topics</h2>
+  <div class="chips topics" id="tlist"></div>
+  <div style="margin-top:10px"><button onclick="selAll(1)">All</button> <button onclick="selAll(0)">None</button></div></div>
+ <div class="card"><h2>4. Add more exercises (multiple choice)</h2>
+  <select id="xt"></select>
+  <div class="row" style="margin-top:8px"><input id="xs" placeholder="Sentence with ___ . Ex: She ___ home."></div>
+  <div class="row" style="margin-top:8px"><input id="xa" placeholder="Correct answer"><input id="xw1" placeholder="Wrong 1"><input id="xw2" placeholder="Wrong 2"></div>
+  <div style="margin-top:8px"><button onclick="addEx()">Add exercise</button> <small id="xmsg"></small></div></div>
+ <div class="card"><h2>How to play</h2><small>Pump to raise the multiplier. Press <b>Cash out</b> before it pops and you bank your bet with no questions. If the balloon pops, you answer a question: correct = <b>×3</b>, wrong = <b>0</b> this turn. After the last round the player with the most points wins.</small></div>
+ <button class="g" style="width:100%;font-size:19px" onclick="start()">🎈 Play</button>
+</div>
+<div id="game" class="hide"><div class="game">
+  <div>
+   <div class="card"><div class="turn">Round <span id="rd"></span><b id="who"></b></div>
+    <div class="ctrl" style="justify-content:stretch"><button class="g" style="flex:1" id="pump" onclick="pump()">🎈 Pump</button><button class="y" style="flex:1" id="stop" onclick="stop()">💰 Cash out</button></div>
+    <button style="width:100%;margin-top:8px" onclick="back()">Back to menu</button></div>
+   <div class="card"><h2>Scoreboard</h2><div id="sc"></div></div>
+  </div>
+  <div class="stage"><div class="mults" id="mults"></div><div class="risk"><u id="rk"></u></div><div id="banner" class="banner"></div><div class="hotb" id="hot">🔥 HIGH RISK 🔥</div><div class="bw" id="bw"><div class="ball" id="ball">1.00x</div></div>
+   <div class="pot"><small>Current bet</small><b id="pot">0</b></div></div>
+</div></div>
+</div>
+<footer class="wm">Developed by <b>stevenzz</b></footer>
+<div id="modal" class="modal hide"><div class="box" id="box"></div></div>
+<script src="script.js"></script></body></html>
